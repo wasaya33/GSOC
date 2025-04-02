@@ -3,15 +3,19 @@ import { FaSearch } from 'react-icons/fa';
 
 const LeftSideBar = () => {
   return (
-    <div className='w-1/4 p-4 border-r border-gray-300 h-screen overflow-y-auto'>
-      <h1 className='text-orange-500 font-bold text-xl mb-4'>GSoC Organizations</h1>
-      <button className='w-full bg-orange-500 text-white py-2 rounded-md mb-4 hover:bg-orange-600'>
-        Clear all filters
-      </button>
+    <div className='w-1/4 p-4 border-r border-gray-300 h-screen overflow-y-auto flex flex-col justify-between'>
       
+      {/* Top Section */}
+      <div className='aaa mb-6'>
+        <h1 className='text-orange-500 font-bold text-xl mb-4'>GSoC Organizations</h1>
+        <button className='w-full bg-orange-500 text-white py-2 rounded-md mb-4 hover:bg-orange-600'>
+          Clear all filters
+        </button>
+      </div>
+
       <div className='mb-4 items-center flex flex-col'>
         <h2 className='text-gray-700 font-semibold mb-2'>Shortcuts</h2>
-        <div className='relative mb-2'>
+        <div className='relative mb-2 w-full'>
           <input 
             type='text' 
             placeholder='Search shortcuts' 
@@ -24,10 +28,10 @@ const LeftSideBar = () => {
           <span>First-time organizations (14)</span>
         </label>
       </div>
-      
+
       <div className='mb-4'>
         <h2 className='text-gray-700 font-semibold mb-2'>Years</h2>
-        <div className='relative mb-2'>
+        <div className='relative mb-2 w-full'>
           <input 
             type='text' 
             placeholder='Search years' 
@@ -45,29 +49,8 @@ const LeftSideBar = () => {
         </div>
         <button className='text-blue-500 mt-2'>View all</button>
       </div>
-      
-      <div className='mb-4'>
-        <h2 className='flex items-center text-gray-700 font-semibold mb-2'>Years</h2>
-        <div className='relative mb-2'>
-          <input 
-            type='text' 
-            placeholder='Search years' 
-            className='w-full p-2 border rounded-md pl-8'
-          />
-          <FaSearch className='absolute left-2 top-3 text-gray-500' />
-        </div>
-        <div className='flex flex-col space-y-1'>
-          {[2025, 2024, 2023, 2022, 2021, 2020].map((year) => (
-            <label key={year} className='flex items-center space-x-2'>
-              <input type='checkbox' className='w-4 h-4' />
-              <span>{year}</span>
-            </label>
-          ))}
-        </div>
-        <button className='text-blue-500 mt-2'>View all</button>
-      </div>
-      
-      <div className='text-center mt-6 text-gray-600'>
+
+      <div className='bbb text-center text-gray-600 mt-auto'>
         <span>Made with ❤️ by <a href='#' className='text-orange-500 font-semibold'>nishantwrp</a></span>
         <div className='flex justify-center space-x-4 mt-2'>
           <button className='flex items-center space-x-1 bg-gray-200 px-3 py-1 rounded-md'>
@@ -77,6 +60,7 @@ const LeftSideBar = () => {
           <button className='bg-gray-200 px-3 py-1 rounded-md'>🐦</button>
         </div>
       </div>
+
     </div>
   );
 };
